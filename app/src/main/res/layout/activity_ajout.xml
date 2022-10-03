@@ -16,28 +16,31 @@
         android:text="Ajout" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ed_nom_ajout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Nom"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#000000" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/ed_prenom_ajout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Prénom"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#000000" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/ed_telephone_ajout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Numéro de téléphone"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:textColor="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,14 +49,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_confirm_ajout"
             style="@style/button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirmer" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btn_cancel_ajout"
             style="@style/button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

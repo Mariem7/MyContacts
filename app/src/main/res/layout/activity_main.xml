@@ -21,11 +21,13 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/ed_mail_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:text="mariem"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/editTextTextPersonName3"
@@ -38,11 +40,12 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/ed_password_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,16 +54,16 @@
         android:gravity="center_horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_login_auth"
             android:text="Login"
             style="@style/button_style" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_qte_auth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#415CC1"
-            android:text="Cancel" />
+            android:text="Quitter" />
     </LinearLayout>
 
 </LinearLayout>

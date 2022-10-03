@@ -22,14 +22,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_add_acceuil"
             style="@style/button_style"
             android:layout_width="182dp"
             android:layout_height="wrap_content"
             android:text="Ajouter un contact" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_edit_acceuil"
             style="@style/button_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
