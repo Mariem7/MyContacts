@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mycontacts.entities.Contact;
+import com.example.mycontacts.manager.ContactManager;
 
 import java.io.PrintStream;
 
@@ -37,11 +38,17 @@ public class Ajout extends AppCompatActivity {
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //get data from view
                 String firs_name = ed_nom_ajout.getText().toString();
                 String last_name = ed_prenom_ajout.getText().toString();
                 String phone_number = ed_telephone_ajout.getText().toString();
-                Contact new_contact = new Contact(firs_name,last_name,phone_number);
-                Acceuil.data.add(new_contact);
+                //add contact to database
+                ContactManager contactManager = new ContactManager(Ajout.this);
+                contactManager.openDataBase();
+                contactManager.addContact(firs_name,last_name,phone_number);
+
+                //init data
+                Acceuil.data = contactManager.getAllContact();
                 Toast.makeText(Ajout.this, "ajouter", Toast.LENGTH_SHORT).show();
             }
         });

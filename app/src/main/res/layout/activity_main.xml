@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="#272727"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Email"
@@ -26,6 +27,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:singleLine="false"
+        android:backgroundTint="#272727"
         android:text="mariem"
         android:textColor="#000000" />
 
@@ -34,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="#272727"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Password"
@@ -45,6 +49,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:backgroundTint="#272727"
         android:textColor="#000000" />
 
     <LinearLayout

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = ed_email.getText().toString();
                 String password = ed_password.getText().toString();
-                if(email.equals("mariem")&& password.equals("mary77")){
+                if(email.equals("mariem")&& password.equals("mary")){
                     Intent i = new Intent(MainActivity.this,Acceuil.class);
                     startActivity(i);
                     finish();

@@ -13,6 +13,7 @@
         style="@style/style_titre1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#272727"
         android:text="Edit" />
 
     <EditText
@@ -21,11 +22,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Search"
+        android:backgroundTint="#272727"
+        android:textColorHint="#272727"
         android:inputType="textPersonName"
         android:textColor="#000000" />
 
-    <ListView
-        android:id="@+id/list_search_edit"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="#000000" />

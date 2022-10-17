@@ -1,20 +1,24 @@
 package com.example.mycontacts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.example.mycontacts.adapters.MyRecyclerAdapter;
+import com.example.mycontacts.manager.ContactManager;
 
 public class Edit extends AppCompatActivity {
 
     //declaration of components
     EditText ed_search_edit;
-    ListView list_search;
+    RecyclerView rv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +29,20 @@ public class Edit extends AppCompatActivity {
 
         //retrieve values from view by id
         ed_search_edit = findViewById(R.id.ed_search_edit);
-        list_search = findViewById(R.id.list_search_edit);
-        ArrayAdapter ad = new ArrayAdapter(Edit.this, android.R.layout.simple_list_item_1,Acceuil.data);
-        list_search.setAdapter(ad);
+        rv = findViewById(R.id.rv);
+        //take as parameter the context (the activity) and the data to be displayed
+        //MyListViewAdapter ad = new MyListViewAdapter(Edit.this, Acceuil.data);
+        ContactManager contactManager = new ContactManager(Edit.this);
+        contactManager.openDataBase();
+        //init data
+        Acceuil.data = contactManager.getAllContact();
+        MyRecyclerAdapter ad = new MyRecyclerAdapter(Edit.this,Acceuil.data);
+        LinearLayoutManager manager = new GridLayoutManager(Edit.this,1,GridLayoutManager.VERTICAL,false);
+        rv.setLayoutManager(manager);
+        rv.setAdapter(ad);
+
+
+
 
         ed_search_edit.addTextChangedListener(new TextWatcher() {
             @Override

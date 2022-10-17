@@ -3,6 +3,7 @@ package com.example.mycontacts.entities;
 import java.util.Objects;
 
 public class Contact {
+    int id;
     String first_name;
     String last_name;
     String phone_number;
@@ -10,7 +11,8 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(String first_name, String last_name, String phone_number) {
+    public Contact(int id, String first_name, String last_name, String phone_number) {
+        this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.phone_number = phone_number;
@@ -19,7 +21,8 @@ public class Contact {
     @Override
     public String toString() {
         return "Contact{" +
-                "first_name='" + first_name + '\'' +
+                "id=" + id +
+                ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", phone_number='" + phone_number + '\'' +
                 '}';
@@ -36,6 +39,14 @@ public class Contact {
     @Override
     public int hashCode() {
         return Objects.hash(getFirst_name(), getLast_name(), getPhone_number());
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirst_name() {
